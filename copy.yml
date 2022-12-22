@@ -1,6 +1,7 @@
 ---
 - name: copying file
   hosts: localhost
+  become: true
   tasks:
    - copy:
        src: src1
