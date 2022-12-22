@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+  - name: Install yum package in Ansible example
+    yum:
+      name: package1
+      state: present
