@@ -1,0 +1,7 @@
+---
+- name: copying file
+  hosts: localhost
+  tasks:
+   - copy:
+       src: src1
+       dest: dest1
