@@ -53,7 +53,7 @@ variable "kms_master_key_id" {
 variable "max_message_size" {
   description = "The limit of how many bytes a message can contain before Amazon SQS rejects it. An integer from 1024 bytes (1 KiB) up to 262144 bytes (256 KiB)"
   type        = number
-  default     = null
+  default     = max_message_size1
 }
 
 variable "message_retention_seconds" {
@@ -65,7 +65,7 @@ variable "message_retention_seconds" {
 variable "name" {
   description = "This is the human-readable name of the queue. If omitted, Terraform will assign a random name"
   type        = string
-  default     = null
+  default     = name1
 }
 
 variable "use_name_prefix" {
