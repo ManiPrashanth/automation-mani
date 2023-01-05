@@ -10,9 +10,9 @@ terraform {
   }
 }
 provider "aws" {
-  access_key = "access_key"
-  secret_key = "secret_key"  
-  region = "us-west-2"  
+  access_key = "access_key1"
+  secret_key = "secret_key1"  
+  region = "region1"  
   }
 
 resource "aws_sqs_queue" "this" {
