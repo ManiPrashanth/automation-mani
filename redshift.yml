@@ -5,12 +5,12 @@ Conditions:
 Parameters:
   SubnetA:
     Type: String 
-    Default: 172.31.1.0/24
+    Default: subnetA1
     Type: AWS::EC2::Subnet::Id
     Description: Make sure this belongs to the VPC specified below (e.g. 172.31.0.0/20)
   SubnetB:
     Type: String
-    Default: 172.31.2.0/24
+    Default: subnetB1
     Type: AWS::EC2::Subnet::Id
     Description: Make sure this is different from the subnet above (e.g. 172.31.16.0/20)
   VPCID:
@@ -19,9 +19,11 @@ Parameters:
     Description: Select a VPC (e.g. 172.31.0.0/16)
   DataBucketName:
     Type: String
+    Default: bucketname1
     Description: S3 data bucket name 
   DatabaseName:
     Type: String
+    Default: databasename1
     Description: Database name 
   MasterUsername:
     Type: String
@@ -29,6 +31,7 @@ Parameters:
     Default: admin
   MasterUserPassword:
     Type: String
+    default: password1
     Description: Master password for Redshift (used mixed case and numbers)
     NoEcho: true 
   DeveloperIPAddress:
@@ -81,9 +84,9 @@ Resources:
             Effect: Allow
             Principal:
               Service:
-                - service1
+                - redshift.amazonaws.com
             Action:
-              - action1
+              - sts:AssumeRole
   RawDataBucketRolePolicy:
     Type: AWS::IAM::Policy
     Properties:
@@ -142,7 +145,7 @@ Resources:
     Properties:
       IpProtocol: tcp
       FromPort: 0
-      ToPort: Toport1
+      ToPort: 65535
       SourceSecurityGroupId: !Ref RedshiftSecurityGroup
       GroupId: !Ref RedshiftSecurityGroup
 Outputs:
