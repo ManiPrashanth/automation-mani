@@ -41,7 +41,7 @@ Parameters:
   NodeType:
     Description: The type of node to be provisioned
     Type: String
-    Default: default1
+    Default: ra3.xlplus
     AllowedValues:
     - ra3.xlplus
     - ra3.4xlarge
