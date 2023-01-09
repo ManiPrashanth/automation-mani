@@ -41,7 +41,7 @@ Parameters:
   NodeType:
     Description: The type of node to be provisioned
     Type: String
-    Default: ra3.xlplus
+    Default: default1
     AllowedValues:
     - ra3.xlplus
     - ra3.4xlarge
@@ -79,9 +79,9 @@ Resources:
             Effect: Allow
             Principal:
               Service:
-                - redshift.amazonaws.com
+                - service1
             Action:
-              - sts:AssumeRole
+              - action1
   RawDataBucketRolePolicy:
     Type: AWS::IAM::Policy
     Properties:
@@ -140,7 +140,7 @@ Resources:
     Properties:
       IpProtocol: tcp
       FromPort: 0
-      ToPort: 65535
+      ToPort: Toport1
       SourceSecurityGroupId: !Ref RedshiftSecurityGroup
       GroupId: !Ref RedshiftSecurityGroup
 Outputs:
