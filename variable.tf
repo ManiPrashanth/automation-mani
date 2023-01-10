@@ -23,7 +23,7 @@ variable "deduplication_scope" {
 variable "delay_seconds" {
   description = "The time in seconds that the delivery of all messages in the queue will be delayed. An integer from 0 to 900 (15 minutes)"
   type        = number
-  default     = null
+  default     = delay_seconds1
 }
 
 variable "fifo_queue" {
@@ -53,13 +53,13 @@ variable "kms_master_key_id" {
 variable "max_message_size" {
   description = "The limit of how many bytes a message can contain before Amazon SQS rejects it. An integer from 1024 bytes (1 KiB) up to 262144 bytes (256 KiB)"
   type        = number
-  default     = null
+  default     = max_message_size1
 }
 
 variable "message_retention_seconds" {
   description = "The number of seconds Amazon SQS retains a message. Integer representing seconds, from 60 (1 minute) to 1209600 (14 days)"
   type        = number
-  default     = null
+  default     = message_retention_seconds1
 }
 
 variable "name" {
