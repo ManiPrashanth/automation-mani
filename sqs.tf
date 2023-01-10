@@ -9,11 +9,7 @@ terraform {
     }
   }
 }
-provider "aws" {
-  access_key = "access_key"
-  secret_key = "secret_key"  
-  region = "us-west-2"  
-  }
+
 
 resource "aws_sqs_queue" "this" {
   count = var.create ? 1 : 0
