@@ -6,13 +6,9 @@ terraform {
     }
   }
 }
-# Configure the AWS Provider
 
-provider "aws" {
-  access_key = "access_key1"
-  secret_key = "secret_key1"  
-  region = "region1"  
-  }
+
+
 
 # Random Password / Suffix
 
