@@ -1,7 +1,7 @@
 ---
 - name: nginx installation & service started
   hosts: localhost
-  become: true
+  become: yes
   tasks:
   - name: install nginx
     apt:
