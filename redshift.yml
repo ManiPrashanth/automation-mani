@@ -32,11 +32,12 @@ Parameters:
     Default: admin
   MasterUserPassword:
     Type: String
-    default: password1
+    Default: password1
     Description: Master password for Redshift (used mixed case and numbers)
     NoEcho: true 
   DeveloperIPAddress:
     Type: String 
+    Default: 14.141.24.202
     Description: Your public IP address (see http://checkip.dyndns.org/)
   RedshiftNodeCount:
     Type: Number
