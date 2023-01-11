@@ -5,16 +5,17 @@ Conditions:
 Parameters:
   SubnetA:
     Type: String 
-    Default: subnetA1
+    Default: subneta1
     Type: AWS::EC2::Subnet::Id
     Description: Make sure this belongs to the VPC specified below (e.g. 172.31.0.0/20)
   SubnetB:
     Type: String
-    Default: subnetB1
+    Default: subnetb1
     Type: AWS::EC2::Subnet::Id
     Description: Make sure this is different from the subnet above (e.g. 172.31.16.0/20)
   VPCID:
     Type: String
+    Default: vpcid1
     Type: AWS::EC2::VPC::Id
     Description: Select a VPC (e.g. 172.31.0.0/16)
   DataBucketName:
