@@ -46,11 +46,12 @@ Parameters:
   NodeType:
     Description: The type of node to be provisioned
     Type: String
-    Default: ra3.xlplus
+    Default: dc2.large
     AllowedValues:
     - ra3.xlplus
     - ra3.4xlarge
     - ra3.16xlarge
+    - dc2.large
 
 Resources:
   RedshiftCluster: 
