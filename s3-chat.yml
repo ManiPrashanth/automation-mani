@@ -4,19 +4,19 @@ Resources:
   MyS3Bucket:
     Type: 'AWS::S3::Bucket'
     Properties:
-      BucketName: mykicktobuck
-      AccessControl: Private
+      BucketName: bucketname1
+      AccessControl: accessControl1
       VersioningConfiguration:
-        Status: Enabled
+        Status: versioningConfiguration1
       LifecycleConfiguration:
         Rules:
-          - Id: Rule for log prefix
+          - Id: id1
             Prefix: logs
             Status: Enabled
             Transitions:
-              - TransitionInDays: 30
+              - TransitionInDays: transitionInDays1
                 StorageClass: STANDARD_IA
               - TransitionInDays: 90
-                StorageClass: GLACIER
-            ExpirationInDays: 365 
+                StorageClass: storageClass1
+            ExpirationInDays: expirationInDays1 
 
