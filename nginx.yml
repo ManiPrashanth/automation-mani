@@ -2,6 +2,7 @@
 - name: nginx installation & service started
   hosts: localhost
   become: yes
+  remote_user: ec2-user
   tasks:
   - name: install nginx
     apt:
